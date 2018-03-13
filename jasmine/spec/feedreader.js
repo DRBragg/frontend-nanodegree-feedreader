@@ -30,15 +30,15 @@ $(function() {
            allFeeds.forEach(feed => {
              expect(feed.url).toBeDefined();
              expect(feed.url.length).toBeGreaterThan(0);
-           })
-         })
+           });
+         });
 
          it(' has a name for each feed', function() {
            allFeeds.forEach(feed => {
              expect(feed.name).toBeDefined();
              expect(feed.name.length).toBeGreaterThan(0);
-           })
-         })
+           });
+         });
     });
 
 
@@ -85,6 +85,6 @@ $(function() {
         expect(initalFeed).toBeDefined();
         expect(newFeed).toBeDefined();
         expect(newFeed).not.toBe(initalFeed);
-      })
+      });
     });
 }());
