@@ -74,16 +74,14 @@ $(function() {
       beforeEach(function(done) {
         loadFeed(0, function() {
           initalFeed = $('.feed').html();
-        });
-        loadFeed(1, function() {
-          newFeed = $('.feed').html();
-          done();
+          loadFeed(1, function() {
+            done();
+          });
         });
       });
 
       it('changes feed content when new feed is selected', function() {
-        expect(initalFeed).toBeDefined();
-        expect(newFeed).toBeDefined();
+        newFeed = $('.feed').html();
         expect(newFeed).not.toBe(initalFeed);
       });
     });
